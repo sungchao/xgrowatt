@@ -133,7 +133,23 @@ Integrated Google Gemini 2.5 Flash acts as an automated microgrid operations ana
 
 ## 📱 4. Cross-Platform Native Mobile Clients
 
-The repository contains complete, production-grade native applications for both iOS and Android:
+The repository contains complete, production-grade native applications for both iOS and Android, featuring a unified dark-mode fintech interface:
+
+<p align="center">
+  <img src="docs/screenshots/01_dashboard_live_flow.png" width="19%" alt="Live Energy Flow Dashboard" />
+  <img src="docs/screenshots/02_ai_charging_plan.png" width="19%" alt="AI Charging Schedule" />
+  <img src="docs/screenshots/03_analytics_energy_profiles.png" width="19%" alt="Power Flow & String Voltage" />
+  <img src="docs/screenshots/04_analytics_solar_forecast.png" width="19%" alt="24H Solar Irradiance Forecast" />
+  <img src="docs/screenshots/05_bill_financial_statement.png" width="19%" alt="Automated Bill Generator" />
+</p>
+
+| Screen | Core Functionality & Architectural Value |
+|:---|:---|
+| **01. Live Energy Flow** | Real-time Canvas power routing vector map (Solar $\to$ Inverter $\to$ Battery $\to$ Load $\to$ Grid), live self-consumption (98%) and grid independence rates. |
+| **02. AI Day-Ahead Schedule** | 24-hour resolved timeline preview, automated overnight off-peak pre-charge, and weekend free-power top-up window triggers. |
+| **03. Power Flow & Voltage** | Telemetry curves showing dynamic MPPT string tracking, battery voltage plateau saturation, and real-time load spikes. |
+| **04. Solar & Weather Forecast** | Open-Meteo GTI irradiance modeling, cloud opacity attenuation, and temperature overlay for predictive MPC planning. |
+| **05. Automated Electricity Bill** | Real-time financial reconciliation, net bill calculation, and cumulative arbitrage savings ($39.88/week) under dynamic retail tariffs. |
 
 ### iOS Native App (`XGrowatt/`)
 * **Technology**: Pure Swift, SwiftUI, Combine, Swift Concurrency (`async`/`await`).
