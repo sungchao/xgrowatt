@@ -66,11 +66,11 @@ Standard time-series libraries often introduce trigonometric harmonics like $\co
 
 To preserve physical validity, XGrowatt uses a strictly non-negative solar elevation proxy:
 
-$$\text{sun\_height}(t) = \max\left(0, \sin\left(\pi \frac{t - 6}{12}\right)\right), \quad t \in [0, 24)$$
+$$h_{\text{sun}}(t) = \max\left(0, \sin\left(\pi \frac{t - 6}{12}\right)\right), \quad t \in [0, 24)$$
 
 By interacting Global Tilted Irradiance ($\text{GTI}$) directly with this proxy:
 
-$$\text{Feature}_{\text{GTI\_Elev}}(t) = \text{GTI}(t) \times \text{sun\_height}(t)$$
+$$\text{Feature}_{\text{GTI}}(t) = \text{GTI}(t) \times h_{\text{sun}}(t)$$
 
 The feature is identically zero from dusk till dawn ($18:00 - 06:00$) and peaks at solar noon ($12:00$), matching photovoltaic physics without sign inversion.
 

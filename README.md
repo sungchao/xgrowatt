@@ -88,9 +88,9 @@ flowchart TD
 
 ### 3.1 Physics-Informed Solar ML (Non-Harmonic Diurnal Modeling)
 * **The Harmonic Sign-Flip Trap**: Standard time-series cyclical encodings like $\cos\left(\frac{2\pi \cdot t}{24}\right)$ reach $-1.0$ at midday ($12:00$). Linear and ridge regressions fit positive weights that inadvertently **subtract solar power at peak noon**.
-* **XGrowatt's Solar Height Proxy**: We formulate a non-negative geometric proxy:
-  $$\text{sun\_height}(t) = \max\left(0, \sin\left(\pi \frac{t - 6}{12}\right)\right)$$
-  Multiplying Global Tilted Irradiance ($\text{GTI}$) by $\text{sun\_height}(t)$ produces a strictly non-negative interaction feature that correctly peaks at midday and is naturally zero overnight.
+* **XGrowatt's Solar Height Proxy**: We formulate a non-negative geometric proxy $h_{\text{sun}}(t)$:
+  $$h_{\text{sun}}(t) = \max\left(0, \sin\left(\pi \frac{t - 6}{12}\right)\right)$$
+  Multiplying Global Tilted Irradiance ($\text{GTI}$) by $h_{\text{sun}}(t)$ produces a strictly non-negative interaction feature that correctly peaks at midday and is naturally zero overnight.
 * **Dual-Quantile Loss ($P_{50}$ / $P_{20}$)**: Combines expected economic yield ($P_{50}$) with an asymmetric Pinball loss quantile regressor ($P_{20}$) to establish a conservative generation floor for rainy and overcast days.
 
 ### 3.2 Closed-Loop Model Predictive Control (MPC) with Self-Damping Feedback
