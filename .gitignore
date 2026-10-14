@@ -1,0 +1,47 @@
+# ===== Credentials & Secrets (NEVER COMMIT) =====
+*serviceAccount*.json
+*service-account*.json
+*firebase-adminsdk*.json
+serviceAccountKey.json
+xgrowatt-key.json
+*.pem
+*.key
+*.p12
+*.keystore
+*.jks
+.env
+.env.*
+.env.local
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+functions/venv/
+*.log
+
+# ===== Machine Learning Datasets & Artifacts =====
+ml/data/
+*.joblib
+*.pkl
+
+# ===== Firebase Cache =====
+.firebase/
+firebase-debug.log
+
+# ===== Android / Gradle =====
+.gradle/
+build/
+app/build/
+local.properties
+*.iml
+.idea/
+
+# ===== iOS / Xcode =====
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+*.xcscmblueprint

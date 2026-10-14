@@ -1,0 +1,50 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "runtime": "python312",
+      "ignore": [
+        "venv",
+        ".venv",
+        "bin",
+        "lib",
+        "share",
+        "pyvenv.cfg"
+      ]
+    }
+  ],
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/.well-known/appspecific/com.tesla.3p.public-key.pem",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-pem-file"
+          },
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/.well-known/appspecific/com.tesla.3p.public-key.pem",
+        "function": "tesla_public_key"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+!bin/
+!bin/**
+!bin/tesla-http-proxy
+venv/
+__pycache__/
+*.pyc

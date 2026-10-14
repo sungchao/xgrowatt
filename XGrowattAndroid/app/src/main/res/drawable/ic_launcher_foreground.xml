@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Stylized Outer Energy Orbit Ring -->
+    <path
+        android:pathData="M54,54m-34,0a34,34 0,1 1,68 0a34,34 0,1 1,-68 0"
+        android:strokeWidth="1.5"
+        android:strokeColor="#3310B981"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+        
+    <!-- Stylized Dashed Orbit segments -->
+    <path
+        android:pathData="M 30,30 A 34,34 0 0 1 78,30"
+        android:strokeWidth="2.5"
+        android:strokeColor="#F7B05B"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <path
+        android:pathData="M 78,78 A 34,34 0 0 1 30,78"
+        android:strokeWidth="2.5"
+        android:strokeColor="#10B981"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+
+    <!-- Premium Battery Silhouette -->
+    <!-- Battery Terminal (Top cap) -->
+    <path
+        android:pathData="M 49,33 h 10 a 1.5,1.5 0 0 1 1.5,1.5 v 1.5 a 0,0 0 0 1 0,0 h -13 a 0,0 0 0 1 0,0 v -1.5 a 1.5,1.5 0 0 1 1.5,-1.5 z"
+        android:fillColor="#10B981"/>
+        
+    <!-- Battery Body with rounded corners -->
+    <path
+        android:pathData="M 44,37 h 20 a 5,5 0 0 1 5,5 v 28 a 5,5 0 0 1 -5,5 h -20 a 5,5 0 0 1 -5,-5 v -28 a 5,5 0 0 1 5,-5 z"
+        android:strokeWidth="3"
+        android:strokeColor="#10B981"
+        android:fillColor="#151E3D"
+        android:fillAlpha="0.8"/>
+
+    <!-- Central Glowing Lightning Bolt / Solar charge icon -->
+    <path
+        android:pathData="M 57.5,42.5 L 46,55.5 h 7 L 50.5,67.5 L 62,54.5 h -7 Z"
+        android:fillColor="#F7B05B"/>
+</vector>
