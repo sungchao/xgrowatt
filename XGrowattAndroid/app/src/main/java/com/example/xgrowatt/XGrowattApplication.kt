@@ -19,24 +19,23 @@ class XGrowattApplication : Application() {
         // Initialize Firebase
         Firebase.initialize(context = this)
 
-        // Custom Static Debug Token
-        // The token below was found in your recent logs. 
-        // PLEASE ENSURE this is registered in Firebase Console:
-        // Build > App Check > Apps > Manage debug tokens
-        val debugToken = "f9558d8f-4369-49b6-94af-70e0f2573d0e"
+        // Custom Static Debug Token (Optional: register in Firebase Console -> App Check -> Manage debug tokens)
+        val debugToken = "" // Set your App Check debug token here if needed
 
-        try {
-            // Write debug secret into the SharedPreferences backing the DebugAppCheckProvider
-            val persistenceKey = "[DEFAULT]"
-            val prefs = getSharedPreferences(
-                "com.google.firebase.appcheck.debug.store.$persistenceKey",
-                Context.MODE_PRIVATE
-            )
-            prefs.edit()
-                .putString("com.google.firebase.appcheck.debug.DEBUG_SECRET", debugToken)
-                .apply()
-        } catch (e: Exception) {
-            e.printStackTrace()
+        if (debugToken.isNotEmpty()) {
+            try {
+                // Write debug secret into the SharedPreferences backing the DebugAppCheckProvider
+                val persistenceKey = "[DEFAULT]"
+                val prefs = getSharedPreferences(
+                    "com.google.firebase.appcheck.debug.store.$persistenceKey",
+                    Context.MODE_PRIVATE
+                )
+                prefs.edit()
+                    .putString("com.google.firebase.appcheck.debug.DEBUG_SECRET", debugToken)
+                    .apply()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
 
         // Install the standard Debug App Check Factory
