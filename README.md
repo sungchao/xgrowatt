@@ -227,7 +227,7 @@ The repository contains complete, production-grade native applications for both 
 ### 1. Cloud Backend Setup
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/XGrowatt.git
+git clone https://github.com/sungchao/xgrowatt.git
 cd XGrowatt
 
 # 2. Configure environment credentials
